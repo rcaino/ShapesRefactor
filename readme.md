@@ -18,11 +18,11 @@ Se puede modificar absolutamente cualquier cosa del código y de los tests, con 
 
 ## Objetivos:
 
-- [X] 1- Refactorizar la clase para respetar principios de la programación orientada a objetos (80%)
+- [X] 1- Refactorizar la clase para respetar principios de la programación orientada a objetos
 - [X] 2- Implementar la forma Rectangulo.
 - [X] 3- Implementar la forma Trapecio.
 - [X] 4- Agregar el idioma Italiano al reporte.
-- [X] 5- Migrar/Elaborar los nuevos tests (40% Progreso).
+- [X] 5- Migrar/Elaborar los nuevos tests.
 
 ## Objetivos Adicionales Planeados:
 
