@@ -9,10 +9,8 @@ namespace CodingChallenge.Data.Classes
     public class Circulo : IFormaGeometrica
     {
         #region Propiedades
-        private decimal radio { get; set; }
-
         public string Tipo => "Circle";
-
+        private decimal radio { get; set; }
         #endregion
 
         #region Metodos

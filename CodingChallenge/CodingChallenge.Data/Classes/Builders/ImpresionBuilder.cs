@@ -94,7 +94,7 @@ namespace CodingChallenge.Data.Classes.Builders
         private string armarBloqueDeCuerpo(ParcialesPorForma acumuladorPorForma)
         {
             var descripcionTipo = obtenerClave(
-                (acumuladorPorForma.cantidad == 1 ? "ShapeSingular" : "ShapePlural") + acumuladorPorForma.tipo
+              "Shape" + (acumuladorPorForma.cantidad == 1 ? "Singular" : "Plural") + acumuladorPorForma.tipo
                 );
             var area = acumuladorPorForma.sumArea.ToString("#.##");
             var perimetro = acumuladorPorForma.sumPerimetro.ToString("#.##");

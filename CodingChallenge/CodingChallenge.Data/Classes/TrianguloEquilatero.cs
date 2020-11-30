@@ -9,8 +9,11 @@ namespace CodingChallenge.Data.Classes
     public class TrianguloEquilatero : PoligonoRegular
     {
         public override string Tipo => "Triangle";
+
+        #region Metodos
         public TrianguloEquilatero(decimal _longitud) : base(3, _longitud) { }
 
         public override decimal CalcularArea() => ((decimal)Math.Sqrt(3) / 4) * longitud * longitud;
+        #endregion
     }
 }

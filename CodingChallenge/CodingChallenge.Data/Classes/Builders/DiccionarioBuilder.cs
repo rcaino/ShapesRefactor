@@ -40,6 +40,9 @@ namespace CodingChallenge.Data.Classes.Builders
                     //Rectángulo
                     dict.Add("ShapeSingularRectangle", "Rectangle");
                     dict.Add("ShapePluralRectangle", "Rectangles");
+                    //Trapecio
+                    dict.Add("ShapeSingularTrapeze", "Trapeze");
+                    dict.Add("ShapePluralTrapeze", "Trapezes");
                     #endregion
                     break;
                 case Const.Idiomas.es:
@@ -69,6 +72,41 @@ namespace CodingChallenge.Data.Classes.Builders
                     //Rectángulo
                     dict.Add("ShapeSingularRectangle", "Rectángulo");
                     dict.Add("ShapePluralRectangle", "Rectángulos");
+                    //Trapecio
+                    dict.Add("ShapeSingularTrapeze", "Trapecio");
+                    dict.Add("ShapePluralTrapeze", "Trapecios");
+                    #endregion
+                    break;
+                case Const.Idiomas.it:
+                    dict.Add("ListEmpty", "<h1>Elenco vuoto di forme!</h1>");
+                    #region Cabecera de Reporte
+                    dict.Add("HeaderReportName", "<h1>Rapporto di forme</h1>");
+                    #endregion
+                    #region Pie de Reporte
+                    dict.Add("FooterTotal", "TOTALE:<br/>");
+                    dict.Add("FooterTotalShapes", "{0} forme ");
+                    dict.Add("FooterTotalPerimeter", "Perimetro {0} ");
+                    dict.Add("FooterTotalArea", "Area {0}");
+                    #endregion
+                    #region Cuerpo de Reporte
+                    dict.Add("BodyResumeLine", "{0} {1} | Area {2} | Perimetro {3} <br/>");
+                    #endregion
+                    #region Nombre de las Formas Singular/Plural
+                    //Cuadrado
+                    dict.Add("ShapeSingularSquare", "Piazza");
+                    dict.Add("ShapePluralSquare", "Piazze");
+                    //Triángulo
+                    dict.Add("ShapeSingularTriangle", "Triangolo");
+                    dict.Add("ShapePluralTriangle", "Triangoli");
+                    //Circulo
+                    dict.Add("ShapeSingularCircle", "Cerchio");
+                    dict.Add("ShapePluralCircle", "Cerchi");
+                    //Rectángulo
+                    dict.Add("ShapeSingularRectangle", "Rettangolo");
+                    dict.Add("ShapePluralRectangle", "Rettangoli");
+                    //Trapecio
+                    dict.Add("ShapeSingularTrapeze", "Trapezio");
+                    dict.Add("ShapePluralTrapeze", "Trapezi");
                     #endregion
                     break;
                 default:
