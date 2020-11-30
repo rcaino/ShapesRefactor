@@ -20,11 +20,11 @@ Se puede modificar absolutamente cualquier cosa del código y de los tests, con 
 
 - [X] 1- Refactorizar la clase para respetar principios de la programación orientada a objetos (80%)
 - [X] 2- Implementar la forma Rectangulo.
-- [ ] 3- Implementar la forma Trapecio.
-- [ ] 4- Agregar el idioma Italiano al reporte.
+- [X] 3- Implementar la forma Trapecio.
+- [X] 4- Agregar el idioma Italiano al reporte.
 - [X] 5- Migrar/Elaborar los nuevos tests (40% Progreso).
 
 ## Objetivos Adicionales Planeados:
 
 4 - Agregar el idioma Italiano al reporte.
-- [ ] a -Migrar los idiomas a Resx.
+- [X] a -Migrar los idiomas a Resx.

@@ -1,7 +1,11 @@
-﻿using System;
+﻿using CodingChallenge.Data.Classes.DictionariesResources;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Resources;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CodingChallenge.Data.Classes.Builders
@@ -14,105 +18,29 @@ namespace CodingChallenge.Data.Classes.Builders
             switch (_idioma)
             {
                 case Const.Idiomas.en:
-                    dict.Add("ListEmpty", "<h1>Empty list of shapes!</h1>");
-                    #region Cabecera de Reporte
-                    dict.Add("HeaderReportName", "<h1>Shapes report</h1>");
-                    #endregion
-                    #region Pie de Reporte
-                    dict.Add("FooterTotal", "TOTAL:<br/>");
-                    dict.Add("FooterTotalShapes", "{0} shapes ");
-                    dict.Add("FooterTotalPerimeter", "Perimeter {0} ");
-                    dict.Add("FooterTotalArea", "Area {0}");
-                    #endregion
-                    #region Cuerpo de Reporte
-                    dict.Add("BodyResumeLine", "{0} {1} | Area {2} | Perimeter {3} <br/>");
-                    #endregion
-                    #region Nombre de las Formas Singular/Plural
-                    //Cuadrado
-                    dict.Add("ShapeSingularSquare", "Square");
-                    dict.Add("ShapePluralSquare", "Squares");
-                    //Triángulo
-                    dict.Add("ShapeSingularTriangle", "Triangle");
-                    dict.Add("ShapePluralTriangle", "Triangles");
-                    //Circulo
-                    dict.Add("ShapeSingularCircle", "Circle");
-                    dict.Add("ShapePluralCircle", "Circles");
-                    //Rectángulo
-                    dict.Add("ShapeSingularRectangle", "Rectangle");
-                    dict.Add("ShapePluralRectangle", "Rectangles");
-                    //Trapecio
-                    dict.Add("ShapeSingularTrapeze", "Trapeze");
-                    dict.Add("ShapePluralTrapeze", "Trapezes");
-                    #endregion
+                    dict.LoadDictionary(ShapesReport_en.ResourceManager);
                     break;
                 case Const.Idiomas.es:
-                    dict.Add("ListEmpty", "<h1>Lista vacía de formas!</h1>");
-                    #region Cabecera de Reporte
-                    dict.Add("HeaderReportName", "<h1>Reporte de Formas</h1>");
-                    #endregion
-                    #region Pie de Reporte
-                    dict.Add("FooterTotal", "TOTAL:<br/>");
-                    dict.Add("FooterTotalShapes", "{0} formas ");
-                    dict.Add("FooterTotalPerimeter", "Perímetro {0} ");
-                    dict.Add("FooterTotalArea", "Área {0}");
-                    #endregion
-                    #region Cuerpo de Reporte
-                    dict.Add("BodyResumeLine", "{0} {1} | Área {2} | Perímetro {3} <br/>");
-                    #endregion
-                    #region Nombre de las Formas Singular/Plural
-                    //Cuadrado
-                    dict.Add("ShapeSingularSquare", "Cuadrado");
-                    dict.Add("ShapePluralSquare", "Cuadrados");
-                    //Triángulo
-                    dict.Add("ShapeSingularTriangle", "Triángulo");
-                    dict.Add("ShapePluralTriangle", "Triángulos");
-                    //Circulo
-                    dict.Add("ShapeSingularCircle", "Círculo");
-                    dict.Add("ShapePluralCircle", "Círculos");
-                    //Rectángulo
-                    dict.Add("ShapeSingularRectangle", "Rectángulo");
-                    dict.Add("ShapePluralRectangle", "Rectángulos");
-                    //Trapecio
-                    dict.Add("ShapeSingularTrapeze", "Trapecio");
-                    dict.Add("ShapePluralTrapeze", "Trapecios");
-                    #endregion
+                    dict.LoadDictionary(ShapesReport_es.ResourceManager);
                     break;
                 case Const.Idiomas.it:
-                    dict.Add("ListEmpty", "<h1>Elenco vuoto di forme!</h1>");
-                    #region Cabecera de Reporte
-                    dict.Add("HeaderReportName", "<h1>Rapporto di forme</h1>");
-                    #endregion
-                    #region Pie de Reporte
-                    dict.Add("FooterTotal", "TOTALE:<br/>");
-                    dict.Add("FooterTotalShapes", "{0} forme ");
-                    dict.Add("FooterTotalPerimeter", "Perimetro {0} ");
-                    dict.Add("FooterTotalArea", "Area {0}");
-                    #endregion
-                    #region Cuerpo de Reporte
-                    dict.Add("BodyResumeLine", "{0} {1} | Area {2} | Perimetro {3} <br/>");
-                    #endregion
-                    #region Nombre de las Formas Singular/Plural
-                    //Cuadrado
-                    dict.Add("ShapeSingularSquare", "Piazza");
-                    dict.Add("ShapePluralSquare", "Piazze");
-                    //Triángulo
-                    dict.Add("ShapeSingularTriangle", "Triangolo");
-                    dict.Add("ShapePluralTriangle", "Triangoli");
-                    //Circulo
-                    dict.Add("ShapeSingularCircle", "Cerchio");
-                    dict.Add("ShapePluralCircle", "Cerchi");
-                    //Rectángulo
-                    dict.Add("ShapeSingularRectangle", "Rettangolo");
-                    dict.Add("ShapePluralRectangle", "Rettangoli");
-                    //Trapecio
-                    dict.Add("ShapeSingularTrapeze", "Trapezio");
-                    dict.Add("ShapePluralTrapeze", "Trapezi");
-                    #endregion
+                    dict.LoadDictionary(ShapesReport_it.ResourceManager);
                     break;
                 default:
                     break;
             }
             return dict;
+        }
+
+        public static void LoadDictionary(this Dictionary<string,string> dict, ResourceManager res )
+        {
+            {
+                var resx = res.GetResourceSet(Thread.CurrentThread.CurrentCulture, true, true);
+                foreach (DictionaryEntry registro in resx)
+                {
+                    dict.Add(registro.Key.ToString(), registro.Value.ToString());
+                }
+            }
         }
     }
 
